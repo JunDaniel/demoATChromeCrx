@@ -9,13 +9,14 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.io.File;
 
 public class TestCaseCrx {
-    public static final String PATH = "D:\\webdriver\\chromedriver.exe";
+    public static final String PATH = System.getProperty("user.dir") + "\\src\\test\\resources\\chromedriver.exe";
     public static final String DRIVER = "webdriver.chrome.driver";
+    public static final String PATH_FILE_CRX = System.getProperty("user.dir") + "\\src\\test\\resources\\extension_2_0_12_0.crx";
 
     public static void main(String[] arg) {
         System.setProperty(DRIVER, PATH);
         ChromeOptions options = new ChromeOptions();
-        options.addExtensions(new File("D:\\Code\\dmoATCrx\\src\\test\\resources\\extension_2_0_12_0.crx"));
+        options.addExtensions(new File(PATH_FILE_CRX));
         ChromeDriver driver = new ChromeDriver(options);
         //open chrome extension Google Translate
         driver.manage().window().maximize();
