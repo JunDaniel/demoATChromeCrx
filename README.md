@@ -11,4 +11,4 @@ Kịch bản test case như sau
 4. Step 4: Click nút Translate trên giao diện của Extension Google Translate
 
 Công việc cần Kiểm thử: 
-Test chức năng dịch ngôn ngữ Tiếng Việt sang ngôn ngữ Tiếng Anh của công cụ Extension Goolge Translate 
+Test chức năng dịch ngôn ngữ Tiếng Việt sang ngôn ngữ Tiếng Anh của công cụ Extension Goolge Translate trên trình duyệt Chrome
