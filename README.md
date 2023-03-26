@@ -9,6 +9,7 @@ Kịch bản kiểm thử với 1 Test case có các bước sau
 2. Step 2: Mở đường dẫn chrome-extension://aapbdbdomjkkjkaonfhkkikfgjllcleb/popup.html 
 3. Step 3: Thực hiện điền text: tương lai vào ô textbox trên giao diện của Extension Google Translate
 4. Step 4: Click nút Translate trên giao diện của Extension Google Translate
+5. Step 5: Thực hiện verify kết quả dịch gồm: text nguồn = tương lai / kết quả dịch mong muốn text = future
 
 Công việc cần Kiểm thử: 
 Test chức năng dịch ngôn ngữ Tiếng Việt sang ngôn ngữ Tiếng Anh của công cụ Extension Google Translate trên trình duyệt Chrome
