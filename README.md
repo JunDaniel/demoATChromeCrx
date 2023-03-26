@@ -1,3 +1,8 @@
+# Công cụ phát triển
+1. Tool InteliJ IDE
+2. Thư viện Selenium / Thư viện Junit
+3. ChromeDriver và trình duyệt Chrome 111.0.5563.111 (bản 64 bit) 
+
 # Demo Automation Test với Extension Google Translate của trình duyệt Chrome
 1. Load file crx của extension Google Translate
 2. Thao tác AT với extension Google Translate
