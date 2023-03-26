@@ -17,6 +17,7 @@ public class TestSuiteCrx {
     public static final String URL_EXTENSION_GOOGLE_TRANSLATE = "chrome-extension://aapbdbdomjkkjkaonfhkkikfgjllcleb/popup.html";
     WebDriver getDriver;
     public static WebDriverWait webWait = null;
+
     @Before
     public void setUp(){
         System.setProperty(DRIVER, PATH);
@@ -33,13 +34,14 @@ public class TestSuiteCrx {
 
     @Test
     public void TC01_Translate_Vietnamese_To_English() {
-        //fill text tương lai to translate from vietnamese to english
+        //fill text tương lai to Google translate Extension to translate from vietnamese to english
         WebElement eleInput = webWait.until(ExpectedConditions.visibilityOfElementLocated(By.id("text-input")));
         eleInput.sendKeys("tương lai");
+        //click button Translate
         WebElement eleBtnTranslate = webWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(), 'Translate')]")));
         eleBtnTranslate.click();
 
-        //Verify display text Source
+        //Verify that display text Source
         WebElement eleTextSource = webWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(), 'tương lai')]")));
         boolean isDisplayTextSource = eleTextSource.isDisplayed();
         if (isDisplayTextSource == true) {
@@ -49,6 +51,8 @@ public class TestSuiteCrx {
             Assert.assertTrue(isDisplayTextSource);
             System.out.println("Not display text source language!");
         }
+
+        //Verify that display text Result translate
         WebElement eleTextResultTrans = webWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(), 'future')]")));
         boolean isDisplayTextResultTrans = eleTextResultTrans.isDisplayed();
         if (isDisplayTextResultTrans == true) {
@@ -59,8 +63,10 @@ public class TestSuiteCrx {
             System.out.println("Not display text result translate!");
         }
     }
+
     @After
     public void closeBrowser () {
+        //close Chrome Browser
         getDriver.quit();
     }
 }
